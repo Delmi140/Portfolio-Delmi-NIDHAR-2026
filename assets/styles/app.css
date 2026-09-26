@@ -4,7 +4,7 @@
 ========================= */
 
 body {
-    background-color: rgba(5, 8, 22, 0.95);;
+    background-color: #050816;
     margin: 0;
     padding-top: 80px;
 }
@@ -3123,6 +3123,381 @@ body {
     .contact-bottom p {
 
         font-size: 12px;
+    }
+
+}
+
+/* =========================================
+/* =========================================
+   FOOTER
+========================================= */
+
+.portfolio-footer {
+    background-color: #030610;
+    color: #F8FAFC;
+    padding: 70px 80px 25px;
+    border-top: 1px solid #1E2A4A;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+
+/* =========================================
+   FOOTER - BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 420px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #F8FAFC;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-logo span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-description {
+    max-width: 400px;
+    margin: 20px 0 0;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #94A3B8;
+}
+
+
+/* =========================================
+   FOOTER - TITRES
+========================================= */
+
+.footer-navigation h3,
+.footer-social h3 {
+    margin: 5px 0 20px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #F8FAFC;
+}
+
+.footer-navigation h3::after,
+.footer-social h3::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 2px;
+
+    margin-top: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   FOOTER - NAVIGATION
+========================================= */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-links a {
+    width: fit-content;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+
+    color: #94A3B8;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #22D3EE;
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   FOOTER - INFORMATIONS PERSONNELLES
+========================================= */
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+
+    color: #94A3B8;
+}
+
+.footer-contact-item i {
+    width: 18px;
+
+    color: #22D3EE;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-contact-item span {
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item:hover span {
+    color: #F8FAFC;
+}
+
+
+/* =========================================
+   FOOTER - SEPARATEUR
+========================================= */
+
+.footer-separator {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 1px;
+
+    margin: 55px auto 25px;
+
+    background-color: #1E2A4A;
+}
+
+
+/* =========================================
+   FOOTER - BAS
+========================================= */
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+
+    color: #64748B;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-legal a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+
+    color: #64748B;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #22D3EE;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETTE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .portfolio-footer {
+        padding: 60px 40px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-description {
+        max-width: 350px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .portfolio-footer {
+        padding: 55px 25px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 600px;
+    }
+
+    .footer-description {
+        max-width: 600px;
+    }
+
+    .footer-separator {
+        margin-top: 45px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - PETIT MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .portfolio-footer {
+        padding: 50px 20px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-logo span {
+        font-size: 19px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .footer-navigation h3,
+    .footer-social h3 {
+        font-size: 16px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+
+    /* Informations personnelles */
+
+    .footer-contact-info {
+        gap: 13px;
+    }
+
+    .footer-contact-item {
+        font-size: 13px;
+    }
+
+
+    /* Séparateur */
+
+    .footer-separator {
+        margin: 40px auto 20px;
+    }
+
+
+    /* Bas du footer */
+
+    .footer-bottom {
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-legal {
+        width: 100%;
+
+        flex-direction: column;
+        gap: 10px;
     }
 
 }
