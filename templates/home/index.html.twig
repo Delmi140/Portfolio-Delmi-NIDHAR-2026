@@ -1,0 +1,1115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio Delmi Nidhar{% endblock %}
+
+{% block body %}
+
+    <header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg portfolio-navbar" data-turbo="false">
+
+            <div class="container-fluid navbar-container">
+
+                <!-- =========================
+                    LOGO + PORTFOLIO
+                ========================== -->
+
+                <a
+                    class="navbar-brand nav-brand"
+                    href="{{ path('home_page') }}"
+                    data-turbo="false"
+                >
+
+                    <img
+                        src="{{ asset('images/ui/logo-portfolio-dn.png') }}"
+                        alt="Logo Portfolio Delmi Nidhar"
+                        class="navbar-logo"
+                    >
+
+                    <span class="nav-subtitle">
+                        PORTFOLIO
+                    </span>
+
+                </a>
+
+
+                <!-- =========================
+                    BOUTON MENU MOBILE
+                ========================== -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Ouvrir le menu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <!-- =========================
+                    MENU
+                ========================== -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar"
+                >
+
+                    <ul class="navbar-nav navbar-links">
+
+                        <!-- À PROPOS -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#about"
+                                data-turbo="false"
+                            >
+                                À propos
+                            </a>
+
+                        </li>
+
+
+                        <!-- COMPÉTENCES -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#competences"
+                                data-turbo="false"
+                            >
+                                Mes compétences
+                            </a>
+
+                        </li>
+
+
+                        <!-- RÉALISATIONS -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#realisations"
+                                data-turbo="false"
+                            >
+                                Réalisations
+                            </a>
+
+                        </li>
+
+
+                        <!-- CONTACT -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#contact"
+                                data-turbo="false"
+                            >
+                                Contact
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+    </header>
+ 
+    <main>
+         <!-- HERO -->
+        <section class="hero-section">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Delmi NIDHAR
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Développeur Web Full Stack Junior<br>
+                        Passionné par la création d'expériences numériques
+                        innovantes et fonctionnelles.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- A PROPOS -->
+        <section id="about" class="about-section">
+
+            <div class="about">
+
+                <!-- TITRE -->
+                <div class="title-about">
+                    <h2 class="about-title">À propos</h2>
+
+                    <p class="about-intro">
+                        Découvrez mon parcours, mes expériences et ce qui m’a conduit vers le développement web.
+                    </p>
+                </div>
+
+
+                <!-- CONTENU -->
+                <div class="about-content">
+
+                    <!-- PHOTO -->
+                    <div class="about-image-container">
+
+                        <div class="about-image-frame">
+                            <img
+                                src="{{ asset('images/ui/moi-portfolio.png') }}"
+                                alt="Delmi Nidhar"
+                                class="image-moi-about"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- TEXTE -->
+                    <div class="about-text">
+
+                        <span class="about-label">
+                            Qui suis-je ?
+                        </span>
+
+                        <h3>
+                            Un développeur web junior avec un parcours différent.
+                        </h3>
+
+                        <p>
+                            Je suis <strong>Delmi NIDHAR, développeur web junior</strong>,
+                            récemment reconverti dans le développement web après plusieurs
+                            années d’expérience dans le commerce et le management.
+                        </p>
+
+                        <p>
+                            Titulaire du
+                            <strong>Titre Professionnel de Développeur Web et Web Mobile</strong>,
+                            j’ai eu l’occasion de travailler sur différents projets lors de ma
+                            formation et de mes expériences professionnelles, notamment avec
+                            <strong>Symfony, PHP, JavaScript, React, Node.js et MySQL</strong>.
+                        </p>
+
+                        <p>
+                            J’ai notamment participé au développement d’applications web
+                            intégrant un système d’authentification, un paiement en ligne
+                            et un back-office d’administration.
+                        </p>
+
+                        <p>
+                            Mon expérience en tant que
+                            <strong>Directeur-adjoint chez GAP</strong> m’a également permis
+                            de développer mon sens des responsabilités, de l’organisation
+                            et du travail en équipe.
+                        </p>
+
+                        <p>
+                            <strong>Curieux, rigoureux et motivé</strong>, j’aime apprendre,
+                            relever de nouveaux défis et continuer à progresser dans le
+                            domaine du développement web.
+                        </p>
+
+
+                        <!-- INFORMATIONS -->
+                        <div class="about-infos">
+
+                            <div class="about-info">
+                                <span>Nom</span>
+                                <strong>Delmi NIDHAR</strong>
+                            </div>
+
+                            <div class="about-info">
+                                <span>Âge</span>
+                                <strong>46 ans</strong>
+                            </div>
+
+                            <div class="about-info">
+                                <span>Email</span>
+                                <strong>nidhardelmi@hotmail.com</strong>
+                            </div>
+
+                            <div class="about-info">
+                                <span>Lieu</span>
+                                <strong>Région parisienne</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+
+       <!-- COMPETENCES -->
+        <section id="competences" class="skills-section">
+
+            <div class="skills">
+
+                <!-- TITRE -->
+                <div class="title-competences">
+                    <h2 class="competences-title">Compétences</h2>
+                    <p class="competences-intro">
+                        Les technologies et outils que j'utilise pour concevoir
+                        des applications web modernes et fonctionnelles.
+                    </p>
+                </div>
+
+
+                <!-- COMPETENCES + CV -->
+                <div class="skills-layout">
+
+
+                    <!-- LISTE DES COMPETENCES -->
+                    <div class="skills-container">
+
+
+                        <!-- FRONTEND -->
+                        <div class="skill-category">
+
+                            <h3>Frontend</h3>
+
+                            <div class="skills-grid">
+
+                                <div class="skill-item">
+                                    <i class="devicon-html5-plain-wordmark"></i>
+                                    <span>HTML5</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-css3-plain-wordmark"></i>
+                                    <span>CSS3</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-javascript-plain"></i>
+                                    <span>JavaScript</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-react-original-wordmark"></i>
+                                    <span>React</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-tailwindcss-original"></i>
+                                    <span>Tailwind CSS</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-framermotion-original"></i>
+                                    <span>Framer Motion</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BACKEND -->
+                        <div class="skill-category">
+
+                            <h3>Backend</h3>
+
+                            <div class="skills-grid">
+
+                                <div class="skill-item">
+                                    <i class="devicon-php-plain"></i>
+                                    <span>PHP</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-symfony-original"></i>
+                                    <span>Symfony</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-openapi-plain"></i>
+                                    <span>OpenAPI</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-doctrine-plain"></i>
+                                    <span>Doctrine</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BASE DE DONNEES -->
+                        <div class="skill-category">
+
+                            <h3>Base de données</h3>
+
+                            <div class="skills-grid">
+
+                                <div class="skill-item">
+                                    <i class="devicon-mysql-original"></i>
+                                    <span>MySQL</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-postgresql-plain"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- OUTILS -->
+                        <div class="skill-category">
+
+                            <h3>Outils</h3>
+
+                            <div class="skills-grid">
+
+                                <div class="skill-item">
+                                    <i class="devicon-git-plain"></i>
+                                    <span>Git</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-github-original"></i>
+                                    <span>GitHub</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-docker-plain"></i>
+                                    <span>Docker</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-vscode-plain"></i>
+                                    <span>VS Code</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <i class="devicon-figma-plain"></i>
+                                    <span>Figma</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CV -->
+                    <div class="cv-card">
+
+                        <h3>Mon CV</h3>
+
+                        <div class="cv-content">
+
+                            <img
+                                src="{{ asset('images/ui/mon-cv.png') }}"
+                                alt="CV de Delmi Nidhar"
+                                class="image-mon-cv"
+                            >
+
+                            <a
+                                href="{{ asset('images/ui/Delmi NIDHAR- CV DEVELOPPEUR WEB JUNIOR.pdf') }}"
+                                download
+                                class="cv-button"
+                            >
+                                Télécharger mon CV
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- REALISATIONS -->
+        <section id="realisations" class="realisations-section">
+
+            <div class="realisations">
+
+                <!-- TITRE -->
+                <div class="title-realisations">
+
+                    <h2 class="realisations-title">
+                        Réalisations
+                    </h2>
+
+                    <p class="realisations-intro">
+                        Découvrez quelques projets réalisés durant ma formation
+                        et mes expériences professionnelles.
+                    </p>
+
+                </div>
+
+
+                <!-- CAROUSEL -->
+                <div
+                    class="projects-carousel"
+                    data-controller="carousel"
+                >
+
+                    <!-- SCENE 3D -->
+                    <div class="carousel-scene">
+
+                        <div
+                            class="carousel"
+                            data-carousel-target="carousel"
+                        >
+
+                            <!-- =================================
+                                PROJET 1
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-1.jpg') }}"
+                                        alt="Application de gestion de contrats"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        Web App
+                                    </span>
+
+                                    <h3>
+                                        Application de gestion de contrats
+                                    </h3>
+
+                                    <p>
+                                        Application web permettant de gérer
+                                        des contrats avec un système
+                                        d'authentification sécurisé.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>Symfony</span>
+                                        <span>PHP</span>
+                                        <span>MySQL</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- =================================
+                                PROJET 2
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-2.jpg') }}"
+                                        alt="Application avec système de paiement"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        E-commerce
+                                    </span>
+
+                                    <h3>
+                                        Application avec paiement en ligne
+                                    </h3>
+
+                                    <p>
+                                        Application web intégrant un système
+                                        de paiement sécurisé et un espace
+                                        d'administration.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>Stripe</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- =================================
+                                PROJET 3
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-3.jpg') }}"
+                                        alt="Back-office d'administration"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        Back-end
+                                    </span>
+
+                                    <h3>
+                                        Back-office d'administration
+                                    </h3>
+
+                                    <p>
+                                        Interface d'administration permettant
+                                        de gérer les utilisateurs, les contenus
+                                        et les données.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>Symfony</span>
+                                        <span>Doctrine</span>
+                                        <span>MySQL</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- =================================
+                                PROJET 4
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-4.jpg') }}"
+                                        alt="Site vitrine responsive"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        Front-end
+                                    </span>
+
+                                    <h3>
+                                        Site vitrine responsive
+                                    </h3>
+
+                                    <p>
+                                        Création d'un site moderne et responsive
+                                        adapté aux différents supports.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- =================================
+                                PROJET 5
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-5.jpg') }}"
+                                        alt="API REST"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        API
+                                    </span>
+
+                                    <h3>
+                                        API REST
+                                    </h3>
+
+                                    <p>
+                                        Développement d'une API REST permettant
+                                        la communication entre le front-end
+                                        et le back-end.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>Node.js</span>
+                                        <span>Express</span>
+                                        <span>MongoDB</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- =================================
+                                PROJET 6
+                            ================================== -->
+
+                            <article
+                                class="project-card"
+                                data-carousel-target="card"
+                            >
+
+                                <div class="project-image">
+
+                                    <img
+                                        src="{{ asset('images/projects/projet-6.jpg') }}"
+                                        alt="Application web mobile"
+                                    >
+
+                                </div>
+
+
+                                <div class="project-content">
+
+                                    <span class="project-category">
+                                        Application
+                                    </span>
+
+                                    <h3>
+                                        Application web mobile
+                                    </h3>
+
+                                    <p>
+                                        Application web responsive pensée
+                                        pour une utilisation sur mobile.
+                                    </p>
+
+
+                                    <div class="project-technologies">
+
+                                        <span>React</span>
+                                        <span>Tailwind</span>
+                                        <span>JavaScript</span>
+
+                                    </div>
+
+
+                                    <a
+                                        href="#"
+                                        class="project-link"
+                                    >
+                                        Voir le projet
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                        CONTROLES
+                    ================================== -->
+
+                    <div class="carousel-controls">
+
+                        <button
+                            type="button"
+                            class="carousel-button"
+                            data-action="click->carousel#previous"
+                            aria-label="Projet précédent"
+                        >
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </button>
+
+
+                        <div class="carousel-counter">
+
+                            <span data-carousel-target="counter">
+                                1
+                            </span>
+
+                            <span>
+                                /
+                            </span>
+
+                            <span>
+                                6
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="carousel-button"
+                            data-action="click->carousel#next"
+                            aria-label="Projet suivant"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+
+            <div class="contact">
+
+                <!-- TITRE -->
+                <div class="title-contact">
+
+                    <h2 class="contact-title">
+                        Contact
+                    </h2>
+
+                    <p class="contact-intro">
+                        Un projet, une idée ou simplement envie d'échanger ?
+                        N'hésitez pas à me contacter.
+                    </p>
+
+                </div>
+
+
+                <!-- CONTENU -->
+                <div class="contact-content">
+
+
+                    <!-- ================================
+                        EMAIL
+                    ================================= -->
+
+                    <div class="contact-main">
+
+                        <span class="contact-label">
+                            Parlons de votre projet
+                        </span>
+
+                        <h3>
+                            Vous avez un projet web ?
+                        </h3>
+
+                        <p class="contact-text">
+                            Besoin de me contacter ? Pas de problème !
+                            Vous pouvez me joindre directement par email.
+                            Je tâcherai de vous répondre aussi vite que possible.
+                        </p>
+
+
+                        <!-- BOUTON EMAIL -->
+
+                        <a
+                            href="mailto:nidhardelmi@hotmail.com"
+                            class="contact-email"
+                        >
+
+                            <span class="contact-icon">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </span>
+
+                            <span class="contact-email-content">
+
+                                <span class="contact-email-label">
+                                    Envoyer un email
+                                </span>
+
+                                <span class="contact-email-address">
+                                    nidhardelmi@hotmail.com
+                                </span>
+
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ================================
+                        RESEAUX
+                    ================================= -->
+
+                    <div class="contact-social">
+
+                        <span class="contact-label">
+                            Mes réseaux
+                        </span>
+
+                        <h3>
+                            Retrouvez-moi également en ligne
+                        </h3>
+
+                        <p class="contact-text">
+                            Retrouvez mon parcours professionnel,
+                            mes projets et mon code sur mes différents profils.
+                        </p>
+
+
+                        <!-- RESEAUX -->
+
+                        <div class="social-links">
+
+
+                            <!-- LINKEDIN -->
+
+                            <a
+                                href="https://www.linkedin.com/in/delmi-nidhar-07a278381"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-card"
+                            >
+
+                                <span class="social-icon">
+
+                                    <i class="fa-brands fa-linkedin-in"></i>
+
+                                </span>
+
+                                <span class="social-content">
+
+                                    <span class="social-name">
+                                        LinkedIn
+                                    </span>
+
+                                    <span class="social-description">
+                                        Mon parcours professionnel
+                                    </span>
+
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+
+                            </a>
+
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/Delmi140"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-card"
+                            >
+
+                                <span class="social-icon">
+
+                                    <i class="fa-brands fa-github"></i>
+
+                                </span>
+
+                                <span class="social-content">
+
+                                    <span class="social-name">
+                                        GitHub
+                                    </span>
+
+                                    <span class="social-description">
+                                        Mes projets et mon code
+                                    </span>
+
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PETITE PHRASE DE FIN -->
+
+                <div class="contact-bottom">
+
+                    <span></span>
+
+                    <p>
+                        Au plaisir d'échanger avec vous.
+                    </p>
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+   
+{% endblock %}
