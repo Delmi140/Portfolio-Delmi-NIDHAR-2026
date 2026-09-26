@@ -1,0 +1,366 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales | Portfolio Delmi Nidhar{% endblock %}
+
+{% block body %}
+
+<main class="legal-page">
+
+    <!-- =========================================
+         HEADER DE LA PAGE
+    ========================================= -->
+
+    <section class="legal-hero">
+
+        <div class="legal-hero-content">
+
+            <a
+                href="{{ path('home_page') }}"
+                class="legal-logo"
+                data-turbo="false"
+            >
+                <img
+                    src="{{ asset('images/ui/logo-portfolio-dn.png') }}"
+                    alt="Logo Delmi Nidhar"
+                >
+
+                <span>PORTFOLIO</span>
+            </a>
+
+            <span class="legal-label">
+                INFORMATIONS LÉGALES
+            </span>
+
+            <h1>
+                Mentions légales
+            </h1>
+
+            <p>
+                Retrouvez les informations relatives au propriétaire,
+                à l'hébergement et aux conditions d'utilisation du site.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTENU
+    ========================================= -->
+
+    <section class="legal-content-section">
+
+        <div class="legal-container">
+
+
+            <!-- Article 1 -->
+
+            <article class="legal-card">
+
+                <span class="legal-number">
+                    01
+                </span>
+
+                <div class="legal-card-content">
+
+                    <h2>
+                        Article 1 – Le propriétaire
+                    </h2>
+
+                    <p>
+                        Le propriétaire de ce site est Delmi NIDHAR,
+                        domicilié à Paris.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Article 2 -->
+
+            <article class="legal-card">
+
+                <span class="legal-number">
+                    02
+                </span>
+
+                <div class="legal-card-content">
+
+                    <h2>
+                        Article 2 – L’hébergeur
+                    </h2>
+
+                    <p>
+                        L’hébergeur du site
+                        <strong>https://</strong>
+                        est PlanetHoster, dont le siège social est situé :
+                    </p>
+
+                    <p>
+                        4416 Rue Louis B. Mayer, Laval, QUEBEC
+                    </p>
+
+                    <p>
+                        H7P 0G1, Canada
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Article 3 -->
+
+            <article class="legal-card">
+
+                <span class="legal-number">
+                    03
+                </span>
+
+                <div class="legal-card-content">
+
+                    <h2>
+                        Article 3 – Accès au site
+                    </h2>
+
+                    <p>
+                        Le site est accessible par tout endroit, 7j/7,
+                        24h/24 sauf cas de force majeure, interruption
+                        programmée ou non et pouvant découler d’une
+                        nécessité de maintenance.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Article 4 -->
+
+            <article class="legal-card">
+
+                <span class="legal-number">
+                    04
+                </span>
+
+                <div class="legal-card-content">
+
+                    <h2>
+                        Article 4 – Collecte des données
+                    </h2>
+
+                    <p>
+                        Le site assure à l’Utilisateur une collecte et un
+                        traitement d’informations personnelles dans le
+                        respect de la vie privée conformément à la loi
+                        n°78-17 du 6 janvier 1978 relative à l’informatique,
+                        aux fichiers et aux libertés.
+                    </p>
+
+                    <p>
+                        En vertu de la loi Informatique et Libertés,
+                        en date du 6 janvier 1978, l’Utilisateur dispose
+                        d’un droit d’accès, de rectification, de suppression
+                        et d’opposition de ses données personnelles.
+                        L’Utilisateur exerce ce droit via le formulaire
+                        de contact et par mail.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Article 5 -->
+
+            <article class="legal-card">
+
+                <span class="legal-number">
+                    05
+                </span>
+
+                <div class="legal-card-content">
+
+                    <h2>
+                        Article 5 – Propriété intellectuelle
+                    </h2>
+
+                    <p>
+                        Toute utilisation, reproduction, diffusion,
+                        commercialisation, modification de toute ou partie
+                        du site, sans autorisation de l’Editeur est prohibée
+                        et pourra entraîner des actions et poursuites
+                        judiciaires telles que notamment prévues par le
+                        Code de la propriété intellectuelle et le Code civil.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Retour -->
+
+            <div class="legal-back">
+
+                <a
+                    href="{{ path('home_page') }}"
+                    class="legal-back-button"
+                    data-turbo="false"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Retour à l'accueil
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="portfolio-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="{{ path('home_page') }}"
+                class="footer-logo"
+                data-turbo="false"
+            >
+                <img
+                    src="{{ asset('images/ui/logo-portfolio-dn.png') }}"
+                    alt="Logo Delmi Nidhar"
+                >
+
+                <span>PORTFOLIO</span>
+            </a>
+
+            <p class="footer-description">
+                Développeur Web Full Stack Junior,
+                passionné par la création d'expériences
+                numériques modernes et fonctionnelles.
+            </p>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="footer-navigation">
+
+            <h3>Navigation</h3>
+
+            <div class="footer-links">
+
+                <a href="{{ path('home_page') }}#about">
+                    À propos
+                </a>
+
+                <a href="{{ path('home_page') }}#competences">
+                    Compétences
+                </a>
+
+                <a href="{{ path('home_page') }}#realisations">
+                    Réalisations
+                </a>
+
+                <a href="{{ path('home_page') }}#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATIONS PERSONNELLES -->
+
+        <div class="footer-social">
+
+            <h3>Me retrouver</h3>
+
+            <div class="footer-contact-info">
+
+                <div class="footer-contact-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+                        Delmi NIDHAR
+                    </span>
+
+                </div>
+
+
+                <div class="footer-contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        80 Boulevard de Magenta<br>
+                        75010 Paris, France
+                    </span>
+
+                </div>
+
+
+                <div class="footer-contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        06 30 62 00 99
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEPARATEUR -->
+
+    <div class="footer-separator"></div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Delmi Nidhar. Tous droits réservés.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="{{ path('privacy_policy_page') }}">
+                Politique de confidentialité
+            </a>
+
+            <a href="{{ path('legal_notice_page') }}">
+                Mentions légales
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+{% endblock %}
