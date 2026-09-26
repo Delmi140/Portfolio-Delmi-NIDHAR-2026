@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+
+final class PrivacyPolicyController extends AbstractController
+{
+    #[Route('/politique-de-confidentialite', name: 'privacy_policy_page')]
+    public function index(): Response
+    {
+        return $this->render('privacy_policy/index.html.twig');
+    }
+}
