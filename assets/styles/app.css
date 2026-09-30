@@ -1838,7 +1838,7 @@ body {
     position: relative;
 
     width: 360px;
-    height: 430px;
+    height: 460px;
 
     transform-style: preserve-3d;
 
@@ -1863,7 +1863,7 @@ body {
     left: 0;
 
     width: 360px;
-    height: 430px;
+    height: 460px;
 
     overflow: hidden;
 
@@ -1914,6 +1914,30 @@ body {
         transform 0.5s ease;
 }
 
+/* =========================================
+   IMAGE PROJET 1 - GRAVITY'S END
+========================================= */
+
+.project-image-gravitys {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #050505;
+}
+
+
+.project-image-gravitys img {
+
+    width: 240%;
+    height: 240%;
+    object-fit: contain;
+    padding: 10px;
+}
+
 
 
 /* =========================================
@@ -1921,7 +1945,7 @@ body {
 ========================================= */
 
 .project-content {
-    padding: 20px;
+    padding: 18px 20px;
 }
 
 
@@ -1934,7 +1958,7 @@ body {
 
     display: inline-block;
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
     padding: 6px 12px;
 
@@ -1958,7 +1982,7 @@ body {
 ========================================= */
 
 .project-content h3 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
 
     font-family: 'Space Grotesk', sans-serif;
 
@@ -1978,13 +2002,13 @@ body {
 
 .project-content p {
 
-    margin: 0 0 20px;
+    margin: 0 0 15px;
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.5;
 
     color: #64748B;
 }
@@ -2001,9 +2025,9 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 6px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 
@@ -2035,30 +2059,55 @@ body {
     display: inline-flex;
 
     align-items: center;
+    justify-content: center;
 
     gap: 8px;
 
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
     font-family: 'Inter', sans-serif;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 600;
 
-    color: #2563EB;
+    color: #FFFFFF;
 
     text-decoration: none;
 
     transition:
-        color 0.3s ease,
-        gap 0.3s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .project-link:hover {
 
-    color: #06B6D4;
+    color: #FFFFFF;
 
-    gap: 12px;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(
+            37,
+            99,
+            235,
+            0.25
+        );
+}
+
+
+.project-link i {
+
+    font-size: 14px;
 }
 
 
@@ -2207,6 +2256,11 @@ body {
     .project-card:hover .project-image img {
 
         transform: scale(1.05);
+    }
+
+    .project-card:hover .project-image-gravitys img {
+
+        transform: none;
     }
 
 }
