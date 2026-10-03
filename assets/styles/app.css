@@ -1939,6 +1939,26 @@ body {
 }
 
 /* =========================================
+   IMAGE PROJET 2 - Trouve ton artisan
+========================================= */
+
+
+.project-image-artisan {
+    background-image: url('/images/projects/trouve-ton-artisan2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-image-artisan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================
    IMAGE PROJET 3 - Port de plaisance de Russell
 ========================================= */
 
@@ -1975,6 +1995,49 @@ body {
     text-align: center;
     color: #FFFFFF;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================
+   IMAGE PROJET 4 - La vie des plantes
+========================================= */
+
+.project-image-plantes {
+    position: relative;
+}
+
+.project-image-plantes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   IMAGE PROJET 5 - Au petit village
+========================================= */
+
+.project-image-petit-village {
+    position: relative;
+}
+
+.project-image-petit-village img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   IMAGE PROJET 6 - Notre livre, notre média
+========================================= */
+
+.project-image-mediatheque {
+    position: relative;
+}
+
+.project-image-mediatheque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -2400,6 +2463,11 @@ body {
         font-size: 10px;
     }
 
+    .project-technologies span {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
 }
 
 
@@ -2506,6 +2574,11 @@ body {
         font-size: 10px;
     }
 
+    .project-technologies span {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
 }
 
 
@@ -2598,6 +2671,11 @@ body {
     .project-link i {
 
         font-size: 9px;
+    }
+
+    .project-technologies span {
+        font-size: 8px;
+        padding: 3px 5px;
     }
 
 }
