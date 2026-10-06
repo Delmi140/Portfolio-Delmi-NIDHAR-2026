@@ -3,35 +3,138 @@
     <head>
         <meta charset="UTF-8">
 
-        <!-- SEO TITLE -->
-        <title>{% block title %}Portfolio Delmi Nidhar{% endblock %}</title>
+        <!-- SEO -->
+        <title>{% block title %}Delmi NIDHAR | Développeur Web Full Stack Junior{% endblock %}</title>
+
+        <meta
+            name="description"
+            content="{% block meta_description %}Portfolio de Delmi NIDHAR, développeur web full stack junior spécialisé en Symfony, PHP, JavaScript, Angular, React, Node.js, Python et développement d'applications web.{% endblock %}"
+        >
+
+        <meta
+            name="keywords"
+            content="Delmi NIDHAR, développeur web, développeur full stack, développeur junior, Symfony, PHP, JavaScript, Angular, React, Node.js, Python, Django, WordPress, portfolio développeur"
+        >
+
+        <meta name="author" content="Delmi NIDHAR">
+
+        <meta
+            name="robots"
+            content="index, follow"
+        >
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <meta name="language" content="fr">
+
+        <!-- CANONICAL -->
+        <link
+            rel="canonical"
+            href="{{ app.request.schemeAndHttpHost ~ app.request.pathInfo }}"
+        >
 
         <!-- FAVICON -->
-        <link rel="icon" href="{{ asset('images/favicon/delmi-nidhar-icon.ico') }}">  
+        <link
+            rel="icon"
+            href="{{ asset('images/favicon/delmi-nidhar-icon.ico') }}"
+        >
+
+        <!-- OPEN GRAPH -->
+        <meta property="og:type" content="website">
+
+        <meta
+            property="og:title"
+            content="Delmi NIDHAR | Développeur Web Full Stack Junior"
+        >
+
+        <meta
+            property="og:description"
+            content="Découvrez le portfolio de Delmi NIDHAR, développeur web full stack junior : Symfony, PHP, JavaScript, Angular, React, Node.js, Python et Django."
+        >
+
+        <meta
+            property="og:url"
+            content="{{ app.request.schemeAndHttpHost ~ app.request.pathInfo }}"
+        >
+
+        <meta
+            property="og:site_name"
+            content="Portfolio Delmi NIDHAR"
+        >
+
+        <meta
+            property="og:locale"
+            content="fr_FR"
+        >
+
+        <meta
+            property="og:image"
+            content="{{ absolute_url(asset('images/ui/logo-portfolio-dn.png')) }}"
+        >
+
+        <!-- TWITTER / X -->
+        <meta
+            name="twitter:card"
+            content="summary_large_image"
+        >
+
+        <meta
+            name="twitter:title"
+            content="Delmi NIDHAR | Développeur Web Full Stack Junior"
+        >
+
+        <meta
+            name="twitter:description"
+            content="Portfolio de Delmi NIDHAR, développeur web full stack junior spécialisé dans le développement d'applications web."
+        >
+
+        <meta
+            name="twitter:image"
+            content="{{ absolute_url(asset('images/ui/logo-portfolio-dn.png')) }}"
+        >
 
         <!-- CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        >
 
         <!-- FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-        
-        <script src="https://kit.fontawesome.com/720311e817.js" crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        >
 
+        <!-- FONT AWESOME -->
+        <script
+            src="https://kit.fontawesome.com/720311e817.js"
+            crossorigin="anonymous"
+        ></script>
 
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
-        
+        <!-- DEVICON -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        >
+
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
+            {% block importmap %}
+                {{ importmap('app') }}
+            {% endblock %}
         {% endblock %}
 
-        
     </head>
     <body>
         {% block body %}{% endblock %}
