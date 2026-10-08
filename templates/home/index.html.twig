@@ -183,7 +183,7 @@
 
                         <div class="about-image-frame">
                             <img
-                                src="{{ asset('images/ui/moi-portfolio.png') }}"
+                                src="{{ asset('images/ui/moi-portfolio2.png') }}"
                                 alt="Delmi Nidhar"
                                 class="image-moi-about"
                             >
@@ -589,7 +589,23 @@
 
                                     </div>
 
+
                                 </div>
+
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur Gravity's End"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="Gravity's End — Site officiel"
+                                    data-project-category="Site web · E-commerce"
+                                    data-project-description="Création du site officiel du groupe de rock alternatif Gravity's End, avec présentation du groupe, de son univers musical et une partie e-commerce."
+                                    data-project-details="Développement d'un site web complet avec Symfony permettant de présenter l'univers du groupe et de proposer une expérience e-commerce."
+                                    data-project-technologies="Symfony|PHP|MySQL|Twig"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
 
                             </article>
 
@@ -678,6 +694,21 @@
 
                                 </div>
 
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur Trouve ton artisan"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="Trouve ton artisan"
+                                    data-project-category="Site web · Annuaire"
+                                    data-project-description="Création d'un site web permettant de rechercher et trouver facilement un artisan selon son métier et sa localisation."
+                                    data-project-details="Projet réalisé avec Angular dans le but de proposer une interface claire permettant aux utilisateurs de rechercher un artisan selon différents critères."
+                                    data-project-technologies="Angular|Sass|HTML5|TypeScript"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
+
                             </article>
 
 
@@ -750,6 +781,20 @@
                                     </div>
 
                                 </div>
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur le Port de plaisance de Russell"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="Port de plaisance de Russell"
+                                    data-project-category="API · Gestion de réservations"
+                                    data-project-description="Développement d'une API REST privée permettant de gérer les catways et les réservations du port de plaisance de Russell."
+                                    data-project-details="Développement d'une API REST avec gestion de l'authentification et sécurisation des accès. Le projet permet de gérer les catways ainsi que les réservations du port."
+                                    data-project-technologies="Node.js|Express|MongoDB|JWT|bcrypt"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
 
                             </article>
 
@@ -810,6 +855,21 @@
                                     </div>
 
                                 </div>
+
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur La vie des plantes"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="La vie des plantes"
+                                    data-project-category="WordPress · E-commerce"
+                                    data-project-description="Création d’un site e-commerce avec WordPress pour une entreprise spécialisée dans la vente de kits de plantes, graines et accessoires de jardinage."
+                                    data-project-details="Mise en place d'une boutique en ligne avec WordPress et WooCommerce, avec création et personnalisation de l'interface à l'aide d'Elementor et WooLentor."
+                                    data-project-technologies="WordPress|WooCommerce|Elementor|WooLentor"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
 
                             </article>
 
@@ -873,6 +933,21 @@
 
                                 </div>
 
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur Au petit village"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="Au petit village"
+                                    data-project-category="Angular · Site e-commerce"
+                                    data-project-description="Développement d’un site web avec Angular pour présenter et vendre des figurines faites main inspirées de l’univers d’Astérix & Obélix."
+                                    data-project-details="Création d'une interface e-commerce avec Angular permettant de présenter les produits et de proposer une expérience de navigation adaptée à la vente de figurines."
+                                    data-project-technologies="Angular|TypeScript|HTML5|CSS3"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
+
                             </article>
 
 
@@ -935,10 +1010,96 @@
 
                                 </div>
 
+                                <!-- Bouton informations -->
+                                <button
+                                    type="button"
+                                    class="project-info-button"
+                                    aria-label="Plus d'informations sur Notre livre, notre média"
+                                    data-action="click->carousel#openModal"
+                                    data-project-title="Notre livre, notre média"
+                                    data-project-category="Django · Application de gestion"
+                                    data-project-description="Développement d’une application web avec Django destinée à moderniser la gestion interne d’une médiathèque et à faciliter la consultation des médias par les emprunteurs."
+                                    data-project-details="Développement d'une application web en Python et Django avec une approche orientée objet pour gérer les ressources d'une médiathèque."
+                                    data-project-technologies="Python|Django|MySQL|POO"
+                                >
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                </button>
+
                             </article>
 
                         </div>
 
+                    </div>
+
+
+                    <!-- =================================
+                        MODAL INFORMATIONS PROJET
+                    ================================== -->
+
+                    <div
+                        class="project-modal"
+                        data-carousel-target="modal"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="project-modal-title"
+                        aria-hidden="true"
+                    >
+                        <div
+                            class="project-modal-overlay"
+                            data-action="click->carousel#closeModal"
+                        ></div>
+
+                        <div class="project-modal-content">
+
+                            <button
+                                type="button"
+                                class="project-modal-close"
+                                data-action="click->carousel#closeModal"
+                                aria-label="Fermer les informations du projet"
+                            >
+                                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="project-modal-header">
+
+                                <span
+                                    class="project-modal-category"
+                                    data-carousel-target="modalCategory"
+                                ></span>
+
+                                <h3
+                                    id="project-modal-title"
+                                    data-carousel-target="modalTitle"
+                                ></h3>
+
+                            </div>
+
+                            <div class="project-modal-body">
+
+                                <p
+                                    class="project-modal-description"
+                                    data-carousel-target="modalDescription"
+                                ></p>
+
+                                <p
+                                    class="project-modal-details"
+                                    data-carousel-target="modalDetails"
+                                ></p>
+
+                                <div class="project-modal-technologies">
+
+                                    <h4>Technologies utilisées</h4>
+
+                                    <div
+                                        class="project-modal-tech-list"
+                                        data-carousel-target="modalTechnologies"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
 
 

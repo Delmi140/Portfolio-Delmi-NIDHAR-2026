@@ -2241,6 +2241,296 @@ body {
     line-height: 1;
 }
 
+/* =========================================
+   BOUTON INFORMATION PROJET
+========================================= */
+
+.project-info-button {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    color: #2563EB;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-info-button i {
+    font-size: 16px;
+}
+
+.project-info-button:hover {
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    border-color: transparent;
+    color: #FFFFFF;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 5px 20px rgba(37, 99, 235, 0.25);
+}
+
+.project-info-button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   MODAL INFORMATIONS PROJET
+========================================= */
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 10000;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.project-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   FOND DU MODAL
+========================================= */
+
+.project-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(5, 8, 22, 0.72);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   CONTENU DU MODAL
+========================================= */
+
+.project-modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 40px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+
+    box-shadow:
+        0 30px 80px rgba(15, 23, 42, 0.30);
+
+    transform: translateY(20px) scale(0.97);
+
+    transition:
+        transform 0.3s ease;
+
+    z-index: 1;
+}
+
+.project-modal.is-open .project-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================
+   BOUTON FERMER
+========================================= */
+
+.project-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 50%;
+
+    background-color: #F8FAFC;
+    color: #475569;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-modal-close:hover {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.project-modal-close:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   EN-TÊTE
+========================================= */
+
+.project-modal-header {
+    padding-right: 45px;
+    margin-bottom: 25px;
+}
+
+.project-modal-category {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    background-color: #EFF6FF;
+    color: #2563EB;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-modal-header h3 {
+    margin: 0;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: #0F172A;
+}
+
+
+/* =========================================
+   CORPS
+========================================= */
+
+.project-modal-body {
+    font-family: 'Inter', sans-serif;
+}
+
+.project-modal-description,
+.project-modal-details {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #475569;
+}
+
+.project-modal-details {
+    color: #64748B;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.project-modal-technologies {
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid #E2E8F0;
+}
+
+.project-modal-technologies h4 {
+    margin: 0 0 15px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #0F172A;
+}
+
+.project-modal-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-modal-tech-list span {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background-color: #F1F5F9;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #475569;
+}
+
 
 /* =========================================
    CONTROLES
@@ -2579,6 +2869,36 @@ body {
         padding: 3px 6px;
     }
 
+    .project-modal {
+    padding: 20px;
+    }
+
+    .project-modal-content {
+        max-height: 90vh;
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .project-modal-header h3 {
+        font-size: 25px;
+    }
+
+    .project-modal-description,
+    .project-modal-details {
+        font-size: 14px;
+    }
+
+    .project-info-button {
+        width: 34px;
+        height: 34px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .project-info-button i {
+        font-size: 15px;
+    }
+
 }
 
 
@@ -2676,6 +2996,38 @@ body {
     .project-technologies span {
         font-size: 8px;
         padding: 3px 5px;
+    }
+
+    .project-modal {
+    padding: 15px;
+    }
+
+    .project-modal-content {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .project-modal-header {
+        padding-right: 40px;
+    }
+
+    .project-modal-header h3 {
+        font-size: 22px;
+    }
+
+    .project-modal-description,
+    .project-modal-details {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .project-modal-technologies h4 {
+        font-size: 16px;
+    }
+
+    .project-modal-tech-list span {
+        font-size: 11px;
+        padding: 6px 10px;
     }
 
 }

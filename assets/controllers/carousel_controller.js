@@ -5,34 +5,36 @@ export default class extends Controller {
     static targets = [
         'carousel',
         'card',
-        'counter'
+        'counter',
+        'modal',
+        'modalTitle',
+        'modalCategory',
+        'modalDescription',
+        'modalDetails',
+        'modalTechnologies'
     ];
 
     connect() {
-
         this.currentIndex = 0;
-
         this.total = this.cardTargets.length;
-
-        /*
-         * Angle entre chaque carte.
-         *
-         * 6 cartes = 360 / 6 = 60 degrés
-         */
         this.angle = 360 / this.total;
-
-        /*
-         * Distance entre le centre et les cartes.
-         */
         this.radius = 420;
+
+        this.previousFocusedElement = null;
 
         this.updateCarousel();
 
+        this.handleKeydown = this.handleKeydown.bind(this);
+        document.addEventListener('keydown', this.handleKeydown);
+    }
+
+
+    disconnect() {
+        document.removeEventListener('keydown', this.handleKeydown);
     }
 
 
     next() {
-
         this.currentIndex++;
 
         if (this.currentIndex >= this.total) {
@@ -40,12 +42,10 @@ export default class extends Controller {
         }
 
         this.updateCarousel();
-
     }
 
 
     previous() {
-
         this.currentIndex--;
 
         if (this.currentIndex < 0) {
@@ -53,47 +53,109 @@ export default class extends Controller {
         }
 
         this.updateCarousel();
-
     }
 
 
     updateCarousel() {
-
-        /*
-         * Rotation du cylindre.
-         *
-         * Chaque clic fait tourner le carousel
-         * de 60 degrés.
-         */
-        const rotation =
-            -this.currentIndex * this.angle;
+        const rotation = -this.currentIndex * this.angle;
 
         this.carouselTarget.style.transform =
             `rotateY(${rotation}deg)`;
 
-
-        /*
-         * Positionnement des cartes autour
-         * du cylindre 3D.
-         */
         this.cardTargets.forEach((card, index) => {
 
-            const cardRotation =
-                index * this.angle;
+            const cardRotation = index * this.angle;
 
             card.style.transform =
-                `rotateY(${cardRotation}deg)
-                 translateZ(${this.radius}px)`;
+                `rotateY(${cardRotation}deg) translateZ(${this.radius}px)`;
+        });
 
+        this.counterTarget.textContent =
+            this.currentIndex + 1;
+    }
+
+
+    openModal(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const button = event.currentTarget;
+
+        this.modalTitleTarget.textContent =
+            button.dataset.projectTitle;
+
+        this.modalCategoryTarget.textContent =
+            button.dataset.projectCategory;
+
+        this.modalDescriptionTarget.textContent =
+            button.dataset.projectDescription;
+
+        this.modalDetailsTarget.textContent =
+            button.dataset.projectDetails;
+
+
+        this.modalTechnologiesTarget.innerHTML = '';
+
+        const technologies =
+            button.dataset.projectTechnologies
+                .split('|');
+
+        technologies.forEach((technology) => {
+
+            const span = document.createElement('span');
+
+            span.textContent = technology;
+
+            this.modalTechnologiesTarget.appendChild(span);
         });
 
 
-        /*
-         * Numéro du projet affiché.
-         */
-        this.counterTarget.textContent =
-            this.currentIndex + 1;
+        this.previousFocusedElement = button;
 
+        this.modalTarget.classList.add('is-open');
+
+        this.modalTarget.setAttribute(
+            'aria-hidden',
+            'false'
+        );
+
+        document.body.classList.add('modal-open');
+
+        this.modalTarget.querySelector(
+            '.project-modal-close'
+        ).focus();
     }
 
+
+    closeModal(event) {
+
+        if (event) {
+            event.preventDefault();
+        }
+
+        this.modalTarget.classList.remove('is-open');
+
+        this.modalTarget.setAttribute(
+            'aria-hidden',
+            'true'
+        );
+
+        document.body.classList.remove('modal-open');
+
+        if (this.previousFocusedElement) {
+            this.previousFocusedElement.focus();
+        }
+    }
+
+
+    handleKeydown(event) {
+
+        if (
+            event.key === 'Escape' &&
+            this.modalTarget.classList.contains('is-open')
+        ) {
+            this.closeModal();
+        }
+    }
 }
