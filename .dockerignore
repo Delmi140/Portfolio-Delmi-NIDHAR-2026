@@ -1,0 +1,7 @@
+.git
+.env.local
+.env.*.local
+.phpunit.cache
+var/cache
+var/log
+vendor
