@@ -219,47 +219,58 @@ body {
    TABLETTE
 ========================================= */
 
+
 @media (max-width: 992px) {
 
     .portfolio-navbar {
-
         padding: 0 30px;
+        background: #050816 !important;
+        background-color: #050816 !important;
     }
 
+    .portfolio-navbar > .navbar-container {
+        flex-wrap: wrap;
+    }
 
-    /*
-     * Sur tablette le menu devient
-     * vertical lorsqu'il est ouvert.
-     */
+    .portfolio-navbar .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 30px 20px;
+        background: #050816 !important;
+        background-color: #050816 !important;
+        box-sizing: border-box;
+        z-index: 10000;
+    }
 
     .navbar-links {
-
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         width: 100%;
-
-        margin-left: 0;
-
-        margin-top: 20px;
-
-        padding-bottom: 20px;
-
-        gap: 5px;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        background-color: #050816 !important;
     }
 
+    .portfolio-navbar .nav-item,
+    .portfolio-navbar .nav-link {
+        width: 100%;
+        background-color: #050816 !important;
+    }
 
     .portfolio-navbar .nav-link {
-
         padding: 12px 10px !important;
+        text-align: left;
+        border-bottom: 1px solid #1E2A4A;
     }
-
 
     .portfolio-navbar .nav-link::after {
-
-        left: 10px;
-        right: 10px;
-
-        bottom: 5px;
+        display: none;
     }
-
 }
 
 
@@ -267,121 +278,80 @@ body {
    MOBILE
 ========================================= */
 
+
 @media (max-width: 768px) {
 
     body {
         padding-top: 75px;
     }
 
-
     .portfolio-navbar {
-
         min-height: 75px;
-
+        height: 75px;
         padding: 0 20px;
+        background: #050816 !important;
     }
 
-
-    /* LOGO */
-
     .navbar-logo {
-
         width: 58px;
         height: 58px;
     }
 
-
-    /* PORTFOLIO */
-
     .nav-subtitle {
-
         font-size: 20px;
     }
 
-
-    /* MENU */
-
-    .navbar-links {
-
-        width: 100%;
-
-        margin-top: 15px;
-
-        padding-bottom: 15px;
-
-        gap: 0;
+    .portfolio-navbar .navbar-collapse {
+        padding: 10px 20px 20px;
+        background: #050816 !important;
+        background-color: #050816 !important;
     }
 
-
-    /* ÉLÉMENTS DU MENU */
-
-    .portfolio-navbar .nav-item {
-
-        width: 100%;
+    .portfolio-navbar .navbar-collapse .navbar-nav,
+    .portfolio-navbar .navbar-collapse .nav-item,
+    .portfolio-navbar .navbar-collapse .nav-link {
+        background: #050816 !important;
+        background-color: #050816 !important;
     }
-
-
-    /* LIENS */
-
-    .portfolio-navbar .nav-link {
-
-        width: 100%;
-
-        padding: 13px 5px !important;
-
-        text-align: left;
-
-        border-bottom: 1px solid #1E2A4A;
-    }
-
-
-    /*
-     * On retire le petit soulignement
-     * sur mobile.
-     */
-
-    .portfolio-navbar .nav-link::after {
-
-        display: none;
-    }
-
-
-    /*
-     * Petit déplacement au survol
-     */
 
     .portfolio-navbar .nav-link:hover {
-
         transform: translateX(5px);
     }
-
 }
-
 
 /* =========================================
    PETIT MOBILE
 ========================================= */
 
+
 @media (max-width: 480px) {
 
     .portfolio-navbar {
-
         padding: 0 15px;
+        background: #050816 !important;
     }
 
+    .portfolio-navbar .navbar-collapse {
+        padding: 10px 15px 20px;
+        background: #050816 !important;
+        background-color: #050816 !important;
+    }
+
+    .portfolio-navbar .navbar-collapse .navbar-nav,
+    .portfolio-navbar .navbar-collapse .nav-item,
+    .portfolio-navbar .navbar-collapse .nav-link {
+        background: #050816 !important;
+        background-color: #050816 !important;
+    }
 
     .navbar-logo {
-
         width: 52px;
         height: 52px;
     }
 
-
     .nav-subtitle {
-
         font-size: 18px;
     }
-
 }
 
 
